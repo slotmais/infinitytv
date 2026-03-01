@@ -239,12 +239,12 @@ nav ul {
     align-items: center;
 }
 .hero h1 {
-    font-size: 2.4rem;
-    margin-bottom: 1.2rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1.1;
     font-family: 'Bebas Neue', cursive;
     background: var(--primary-gradient);
-    background-size: 100% 170%;
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -254,10 +254,10 @@ nav ul {
         0 0 1px #fff,
         0 0 2px rgba(10, 61, 145, 0.4),
         0 0 4px rgba(30, 115, 232, 0.4);
-    display: flex; /* Transforma o h1 em um container flexível */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: center; /* Alinha o conteúdo (texto + ícone) ao centro horizontalmente */
-    gap: 2px; /* Espaçamento entre o texto e o ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     text-align: center;
 }
 @keyframes textShine {
@@ -267,7 +267,6 @@ nav ul {
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
-    font-family: 'Bebas Neue', cursive;
     color: var(--text-light);
     -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
     text-stroke: 0.5px rgba(0, 0, 0, 0.5);
@@ -286,25 +285,24 @@ nav ul {
     padding-top: 0;
 }
 .hero-icon {
-    width: 250px;
-    height: 200px;
+    width: 500px;
+    height: 460px;
 }
-media (max-width: 768px) {
+@media (max-width: 768px) {
     .hero {
         padding: 6rem 0 1rem 0;
         min-height: 110vh;
     }
     .hero h1 {
         font-size: 2.5rem;
-        /* gap: 8px; */ /* Ajuste fino do espaçamento em mobile se necessário */
-        /* flex-direction: column; */ /* <-- COMENTE OU REMOVA ESTA LINHA */
-        gap: 5px; /* Espaçamento reduzido entre o ícone e o texto em mobile */
+        flex-direction: column;
+        gap: 5px;
     }
-    /* .hero-icon {
+    .hero-icon {
         width: 300px;
         height: 360px;
-        order: -1; /* Isso faria o ícone vir antes do texto se a direção fosse column */
-    /* } */
+        order: -1;
+    }
     .hero-text {
         font-size: 2.3rem;
     }
