@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5BSCD7LL');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InfinityTV - Entretenimento sem Limites</title>
+<meta name="description" content="O melhor serviço premium com qualidade 4K, estabilidade máxima e variedade infinita de esportes, filmes e séries.">
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Reset e Base */
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-darker: #0f0f15;
+    --bg-dark-accent: #1a1a2a;
+    --primary-blue: #0A3D91; /* Azul Primário InfinityTV */
+    --secondary-blue: #1E73E8; /* Azul Secundário InfinityTV */
+    --white: #FFFFFF; /* Branco InfinityTV */
+    --light-gray: #F2F4F8; /* Cinza Claro InfinityTV */
+    --primary-gradient: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue), var(--white)); /* Gradiente InfinityTV */
+    --text-light: var(--white);
+    --text-gray: var(--light-gray);
+    --border-dark: #2a2a3a;
+    --glass-bg: rgba(10, 10, 10, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 15px rgba(10, 61, 145, 0.5), 0 0 30px rgba(30, 115, 232, 0.3); /* Sombra com base nas cores InfinityTV */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+p {
+    color: var(--text-gray);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: var(--shadow-glow);
+}
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(10, 61, 145, 0.7), 0 0 40px rgba(30, 115, 232, 0.5);
+}
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.btn-secondary:hover {
+    background: rgba(10, 61, 145, 0.1);
+}
+.card {
+    background: var(--bg-dark-accent);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+    overflow: visible;
+    position: relative;
+    border: 2px solid transparent;
+}
+.section {
+    padding: 5rem 0;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.section-title h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.section-title p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+.section-subtitle {
+    color: var(--secondary-blue);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 0;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+.logo img {
+    height: 40px;
+    width: auto;
+}
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--secondary-blue);
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gradient);
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+/* Hero */
+.hero {
+    position: relative;
+    padding: 10rem 0 8rem 0;
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: url('background2.png') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 0%, rgba(2, 6, 23, 0.95) 100%);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    font-family: 'Bebas Neue', cursive;
+    background: var(--primary-gradient);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: textShine 3s linear infinite;
+    text-shadow:
+        0 0 1px #fff,
+        0 0 2px rgba(10, 61, 145, 0.4),
+        0 0 4px rgba(30, 115, 232, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+@keyframes textShine {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+}
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-light);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+    text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+}
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.hero-btns .btn {
+    min-width: 200px;
+}
+.features .section {
+    padding-top: 0;
+}
+.hero-icon {
+    width: 500px;
+    height: 460px;
+}
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 0 1rem 0;
+        min-height: 110vh;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .hero-icon {
+        width: 300px;
+        height: 360px;
+        order: -1;
+    }
+    .hero-text {
+        font-size: 2.3rem;
+    }
+}
+/* Features - Ajustado o padding-top */
+.features .section {
+    padding: 4rem 0 5rem 0;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.feature-card {
+    padding: 2rem;
+    text-align: center;
+}
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 auto 1.5rem;
+    font-size: 2.5rem;
+}
+.feature-card h3 {
+    margin-bottom: 1rem;
+}
+/* Testimonials - Ajustado o padding-top */
+.testimonials .section {
+    padding: 8rem 0 5rem 0;
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.testimonial-card {
+    padding: 2rem;
+    border-left: 4px solid var(--primary-blue);
+}
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+.testimonial-info h4 {
+    margin-bottom: 0.25rem;
+}
+.testimonial-rating {
+    color: var(--secondary-blue);
+}
+/* Plans - Ajustado o padding-top */
+.plans .section {
+    padding: 8rem 0 5rem 0;
+}
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+@media (max-width: 1200px) {
+    .plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+        padding: 0 0.5rem;
+    }
+    .plan-card.popular {
+        transform: scale(1.03);
+    }
+    .plan-card {
+        padding: 1.5rem 1rem;
+    }
+}
+.plan-card {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 2px solid var(--border-dark);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-dark-accent) url("") center/cover no-repeat;
+}
+.popular-tag {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-gradient);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+    box-shadow: var(--shadow-glow);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(10, 61, 145, 0.4), 0 0 0 0 rgba(30, 115, 232, 0.2); }
+    70% { box-shadow: 0 0 0 10px rgba(10, 61, 145, 0), 0 0 0 20px rgba(30, 115, 232, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(10, 61, 145, 0), 0 0 0 0 rgba(30, 115, 232, 0); }
+}
+.plan-card.popular {
+    border-color: var(--primary-blue);
+    transform: scale(1.03);
+    z-index: 10;
+    box-shadow: var(--shadow-card), inset 0 0 15px rgba(10, 61, 145, 0.1);
+}
+.plan-card.popular .btn-primary {
+    background: var(--primary-gradient);
+}
+.plan-header h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Bebas Neue', cursive;
+}
+.plan-price {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+.plan-price .number {
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Bebas Neue', cursive;
+}
+.plan-price .duration {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    font-weight: 500;
+    font-family: 'Bebas Neue', cursive;
+}
+.plan-savings {
+    color: #10b981;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-family: 'Bebas Neue', cursive;
+}
+.plan-features {
+    list-style: none;
+    margin: 2rem 0;
+    text-align: center;
+    flex-grow: 1;
+}
+.plan-features li {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-dark);
+}
+.plan-features li:last-child {
+    border-bottom: none;
+}
+.plan-features li i {
+    color: var(--secondary-blue);
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+.plan-btn-container {
+    margin-top: auto;
+}
+/* Footer */
+footer {
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border-dark);
+    padding: 4rem 0 2rem;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.footer-col h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+.footer-links a:hover {
+    color: var(--secondary-blue);
+}
+.newsletter form {
+    display: flex;
+}
+.newsletter input {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    background: var(--bg-dark-accent);
+    border: 1px solid var(--border-dark);
+    border-radius: 8px 0 0 8px;
+    color: var(--text-light);
+}
+.newsletter button {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.newsletter button:hover {
+    opacity: 0.9;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-dark);
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+/* Back to Top */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-glow);
+    z-index: 999;
+}
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* Mobile Menu */
+#mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+#mobile-menu.active {
+    display: flex;
+    transform: translateX(0);
+}
+#mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+/* Loading Spinner Placeholder for Form */
+.loading-spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+/* Novo: Banner Promocional (Netflix Style) */
+.promo-banner {
+    background: var(--bg-dark-accent);
+    border: 1px solid var(--border-dark);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease;
+}
+.promo-banner:hover {
+    transform: translateY(-2px);
+}
+.promo-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.promo-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+}
+.promo-text {
+    display: flex;
+    flex-direction: column;
+}
+.promo-text strong {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+.promo-text p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin: 0;
+}
+.promo-btn {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.promo-btn:hover {
+    opacity: 0.9;
+}
+@media (max-width: 768px) {
+    .promo-banner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+    .promo-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    .promo-btn {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+/* Estilo para o Carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+    min-width: 100%;
+}
+.carousel-item img {
+    width: 100%;
+    display: block;
+    height: 400px;
+    object-fit: cover;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+.carousel-indicator {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: var(--text-gray);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.carousel-indicator.active {
+    background: var(--secondary-blue);
+}
+.carousel-subtitle {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--text-gray);
+}
+/* --- Estilo para os novos cards de features (Simplificado) --- */
+:root {
+    --card-height: 320px;
+    --card-width: calc(var(--card-height) / 1.5);
+    --card-bg: #191c29;
+}
+.features .section {
+    padding: 4rem 0 5rem 0;
+}
+.features .card-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+}
+.features .card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2500px;
+    margin: 0 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--card-bg) url('card.jpg') center/cover no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-card);
+}
+.features .wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.features .floating-icon {
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    z-index: 2;
+    pointer-events: none;
+    margin-bottom: 10px;
+}
+.features .title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    z-index: 3;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 10px;
+}
+.features .card-text {
+    color: white;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-top: 5px;
+    opacity: 0.9;
+    z-index: 2;
+    max-width: 90%;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+.features .card-text h3 {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+    color: #aaa;
+}
+.features .card-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #ddd;
+    font-weight: 300;
+}
+@media (min-width: 1101px) {
+    .features .card-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+    .features .card {
+        margin: 0;
+    }
+}
+@media (max-width: 1100px) {
+    .features .card-container {
+        gap: 30px;
+    }
+}
+@media (max-width: 850px) {
+    .features .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .features .card {
+        margin: 0;
+        border-radius: 15px;
+        height: 350px;
+        background: var(--card-bg) url('card.jpg') center/cover no-repeat;
+    }
+}
+@media (max-width: 500px) {
+    :root {
+        --card-height: 460px;
+        --card-width: calc(var(--card-height) / 1.5);
+    }
+    .features .card-container {
+        gap: 30px;
+    }
+    .features .floating-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .features .card-text h3 {
+        font-size: 1.1rem;
+    }
+    .features .card-text p {
+        font-size: 0.85rem;
+    }
+    .features .title {
+        font-size: 1.2rem;
+    }
+    .features .card {
+        background: var(--card-bg) url("https://img.freepik.com/fotos-gratis/colagem-de-fundo-de-filme_23-2149876004.jpg") center/cover no-repeat;
+    }
+}
+/* --- Fim do Estilo para os novos cards de features (Simplificado) --- */
+/* --- Estilo do CodePen para Depoimentos (sem dados dos clientes) --- */
+.testimonials .section {
+    padding: 8rem 0 5rem 0;
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.testimonial {
+    position: relative;
+    padding: 2rem;
+    background: var(--bg-dark-accent);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+    border: 2px solid transparent;
+    overflow: visible;
+}
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    background-color: #ccc;
+}
+.testimonial-info h4 {
+    margin-bottom: 0.25rem;
+}
+.testimonial-rating {
+    color: var(--secondary-blue);
+    font-size: 0.9rem;
+}
+.testimonial p {
+    color: var(--text-gray);
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+.testim {
+    width: 100%;
+    position: relative;
+    max-width: 1020px;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+.testim .wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    margin: auto;
+}
+.testim .arrow {
+    display: block;
+    position: absolute;
+    color: #eee;
+    cursor: pointer;
+    font-size: 2em;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+    padding: 5px;
+    z-index: 22222222;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testim .arrow:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.7);
+}
+.testim .arrow.left {
+    left: 10px;
+}
+.testim .arrow.right {
+    right: 10px;
+}
+.testim .dots {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+    display: block;
+    z-index: 3333;
+    height: 12px;
+}
+.testim .dots .dot {
+    list-style-type: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    position: relative;
+}
+.testim .dots .dot.active,
+.testim .dots .dot:hover {
+    background: var(--secondary-blue);
+    border-color: var(--primary-blue);
+}
+.testim .dots .dot.active {
+    animation: testim-scale .5s ease-in-out forwards;
+}
+@keyframes testim-scale {
+    0% { box-shadow: 0px 0px 0px 0px #eee; }
+    35% { box-shadow: 0px 0px 10px 5px #eee; }
+    70% { box-shadow: 0px 0px 10px 5px #1612f3; }
+    100% { box-shadow: 0px 0px 0px 0px #2812f3; }
+}
+.testim .cont {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 50px 20px 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+.testim .cont > div {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0 70px 0;
+    opacity: 0;
+    width: 100%;
+}
+.testim .cont > div.inactive {
+    opacity: 1;
+    z-index: 1;
+}
+.testim .cont > div.active {
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+}
+.testim .cont div .img {
+    margin-bottom: 20px;
+    position: relative;
+    height: 120px;
+}
+.testim .cont div .img img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.testim .cont div.active .img img {
+    animation: testim-show .5s ease-in-out forwards;
+}
+.testim .cont div.inactive .img img {
+    animation: testim-hide .5s ease-in-out forwards;
+}
+@keyframes testim-show {
+    from { opacity: 0; transform: translateX(-50%) scale(0); }
+    to { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+@keyframes testim-hide {
+    from { opacity: 1; transform: translateX(-50%) scale(1); }
+    to { opacity: 0; transform: translateX(-50%) scale(0); }
+}
+.testim .cont div h2 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin: 15px 0;
+    opacity: 0;
+}
+.testim .cont div .rating {
+    color: var(--secondary-blue);
+    margin: 10px 0;
+    opacity: 0;
+}
+.testim .cont div p {
+    font-size: 1.15em;
+    color: #fff;
+    width: 80%;
+    margin: auto;
+    line-height: 1.6;
+    opacity: 0;
+}
+.testim .cont div.active h2 {
+    animation: testim-content-in .4s ease-in-out forwards;
+}
+.testim .cont div.active .rating {
+    animation: testim-content-in .45s ease-in-out forwards;
+}
+.testim .cont div.active p {
+    animation: testim-content-in .5s ease-in-out forwards;
+}
+@keyframes testim-content-in {
+    from { opacity: 0; transform: translateY(100%); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.testim .cont div.inactive h2 {
+    animation: testim-content-out .4s ease-in-out forwards;
+}
+.testim .cont div.inactive .rating {
+    animation: testim-content-out .45s ease-in-out forwards;
+}
+.testim .cont div.inactive p {
+    animation: testim-content-out .5s ease-in-out forwards;
+}
+@keyframes testim-content-out {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-100%); }
+}
+@media all and (max-width: 768px) {
+    .testim .arrow {
+        font-size: 1.5em;
+        width: 40px;
+        height: 40px;
+    }
+    .testim .cont div p {
+        font-size: 1em;
+        width: 95%;
+    }
+    .testim .cont {
+        padding: 30px 15px 90px;
+    }
+}
+@media all and (max-width: 420px) {
+    .testim .cont div p {
+        line-height: 25px;
+    }
+    .testim .cont {
+        padding: 20px 10px 80px;
+    }
+    .testim .arrow {
+        font-size: 1.2em;
+        width: 35px;
+        height: 35px;
+    }
+}
+/* --- Fim do Estilo do CodePen para Depoimentos --- */
+</style>
+<!-- Importando a fonte Bebas Neue do Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BSCD7LL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Header -->
+<header>
+    <div class="container header-container">
+        <a href="#home" class="logo">
+            <img src="logo.png" alt="Logo InfinityTV"> <!-- Certifique-se de que 'logo.png' está na mesma pasta -->
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="https://wa.me/SEU_NUMERO_AQUI?text=Olá,%20tenho%20interesse%20em%20assinar%20um%20plano%20da%20InfinityTV.%20Poderia%20me%20ajudar?" class="btn btn-primary">Assine Agora</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+    <ul>
+        <li><a href="#home" class="nav-link">Início</a></li>
+        <li><a href="#features" class="nav-link">Recursos</a></li>
+        <li><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+        <li><a href="#plans" class="nav-link">Planos</a></li>
+    </ul>
+</div>
+
+<!-- Hero -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>
+            InfinityTV – O infinito do entretenimento.
+            <img src="box.png" alt="Ícone Hero" class="hero-icon"> <!-- Ícone adicionado -->
+        </h1>
+        <p>Entretenimento ilimitado com estabilidade máxima. Mais de 23 mil títulos de esportes, filmes e séries em um só lugar.</p>
+        <div class="hero-btns">
+            <a href="https://wa.me/5587999423220?text=Olá,%20gostaria%20de%20solicitar%20o%20teste%20gratuito." class="btn btn-primary">Teste Grátis</a>
+            <a href="#plans" class="btn btn-secondary">Ver Planos</a>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="features">
+    <div class="container">
+        <div class="section-title">
+            <h2>Recursos Exclusivos InfinityTV</h2>
+            <p>Oferecemos os melhores recursos para sua experiência de entretenimento.</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="wrapper">
+                    <div class="floating-icon" style="background-image: url('instalação.png');"></div>
+                    <div class="card-text">
+                        <h3>Fácil Instalação</h3>
+                        <p>Compatível com todas Smart TVs, TV Box e Android TV. Conecte e comece a assistir.</p>
+                    </div>
+                    <div class="title"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="wrapper">
+                    <div class="floating-icon" style="background-image: url('4k.png');"></div>
+                    <div class="card-text">
+                        <h3>Qualidade 4K/FHD</h3>
+                        <p>Imagem nítida e vibrante para uma experiência visual imersiva.</p>
+                    </div>
+                    <div class="title"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="wrapper">
+                    <div class="floating-icon" style="background-image: url('tv.png');"></div>
+                    <div class="card-text">
+                        <h3>Canais, Filmes & Séries</h3>
+                        <p>Tudo em um só lugar: esportes, notícias, filmes, séries e muito mais.</p>
+                    </div>
+                    <div class="title"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="wrapper">
+                    <div class="floating-icon" style="background-image: url('segurança.png');"></div>
+                    <div class="card-text">
+                        <h3>Segurança Total</h3>
+                        <p>Servidores dedicados e criptografia para proteger sua privacidade.</p>
+                    </div>
+                    <div class="title"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Novo: Carrossel de Imagens Automático (sem setas) -->
+<section id="carousel-section" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Assista com estabilidade e qualidade infinitas.</h2>
+            <p class="carousel-subtitle">Sinta a adrenalina do esporte, ação de tirar o fôlego, alegria e magia para a família toda sem pausas e travamentos.</p>
+        </div>
+        <div class="carousel-container" id="autoCarousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="futebol.png" alt="Esportes">
+                </div>
+                <div class="carousel-item">
+                    <img src="sniper.png" alt="Filmes">
+                </div>
+                <div class="carousel-item">
+                    <img src="carneiro.png" alt="Séries">
+                </div>
+                <div class="carousel-item">
+                    <img src="iptv.png" alt="Tecnologia">
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <span class="carousel-indicator active" onclick="currentSlide(1)"></span>
+                <span class="carousel-indicator" onclick="currentSlide(2)"></span>
+                <span class="carousel-indicator" onclick="currentSlide(3)"></span>
+                <span class="carousel-indicator" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Novo: Banner Promocional (Netflix Style) -->
+<div class="container">
+    <div class="promo-banner">
+        <div class="promo-content">
+            <img src="box.png" alt="Ícone Promoção" class="promo-icon">
+            <div class="promo-text">
+                <strong>Plano completo que você vai adorar por apenas R$ 29,90.</strong>
+                <p>Aproveite nossa opção mais acessível.</p>
+            </div>
+        </div>
+        <a href="https://wa.me/5587999423220?text=Olá,%20gostaria%20de%20assinar%20o%20plano%20Mensal%20no%20valor%20de%20R%24%2029,00." class="promo-btn">Assinar Agora</a>
+    </div>
+</div>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>O Que Nossos Clientes Dizem</h2>
+            <p>Confira depoimentos de quem já experimenta a qualidade InfinityTV.</p>
+        </div>
+        <div class="testim">
+            <div class="wrap">
+                <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                <ul id="testim-dots" class="dots">
+                    <li class="dot active"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                </ul>
+                <div id="testim-content" class="cont">
+                    <div class="active">
+                        <div class="img"><img src="nene.png" alt="Cliente 1"></div>
+                        <h2>Maria Silva</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"A InfinityTV mudou minha forma de assistir TV. A qualidade é impecável e a variedade é impressionante. Vale cada centavo!"</p>
+                    </div>
+                    <div class="inactive">
+                        <div class="img"><img src="ruan.png" alt="Cliente 2"></div>
+                        <h2>Carlos Oliveira</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Estou extremamente satisfeito. A estabilidade é 100%, os canais esportivos são ótimos e o suporte é muito rápido."</p>
+                    </div>
+                    <div class="inactive">
+                        <div class="img"><img src="iasmin.png" alt="Cliente 3"></div>
+                        <h2>Ana Souza</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Finalmente encontrei um serviço que junta tudo o que eu assistia separadamente. Economizei e ganhei em praticidade."</p>
+                    </div>
+                    <div class="inactive">
+                        <div class="img"><img src="diego.png" alt="Cliente 4"></div>
+                        <h2>José Santos</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>"A qualidade 4K é notável. A interface é intuitiva e a biblioteca de filmes é vasta e atualizada."</p>
+                    </div>
+                    <div class="inactive">
+                        <div class="img"><img src="gabriel.png" alt="Cliente 5"></div>
+                        <h2>Fernanda Costa</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Minha família adora! Tudo ao mesmo tempo, em todos os dispositivos, sem travamentos."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Plans -->
+<section id="plans" class="plans">
+    <div class="container">
+        <div class="section-title">
+            <h2>Escolha Seu Plano Infinity</h2>
+            <p>Assinaturas mensais com os mesmos recursos e descontos por antecipação.</p>
+        </div>
+        <div class="plans-grid">
+            <div class="card plan-card">
+                <div class="plan-header">
+                    <h3>Plano Mensal</h3>
+                    <div class="plan-price">
+                        <span class="number">R$ 29,00</span>
+                        <span class="duration">mês</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> 1 Mês de Acesso</li>
+                    <li><i class="fas fa-check"></i> Canais Ao Vivo</li>
+                    <li><i class="fas fa-check"></i> Filmes e Séries</li>
+                    <li><i class="fas fa-check"></i> Qualidade 4K/HD</li>
+                    <li><i class="fas fa-check"></i> Conexões Ilimitadas</li>
+                    <li><i class="fas fa-check"></i> Suporte 24h</li>
+                </ul>
+                <div class="plan-btn-container">
+                    <a href="https://wa.me/5587999423220?text=Olá,%20gostaria%20de%20assinar%20o%20plano%20Mensal%20no%20valor%20de%20R%24%2029,00." class="btn btn-primary">Assinar Agora</a>
+                </div>
+            </div>
+            <div class="card plan-card popular">
+                <div class="popular-tag">Mais Popular</div>
+                <div class="plan-header">
+                    <h3>Plano Trimestral</h3>
+                    <div class="plan-price">
+                        <span class="number">R$ 79,00</span>
+                        <span class="duration">3 meses</span>
+                    </div>
+                    <div class="plan-savings">Economize R$ 8,00</div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> 3 Meses de Acesso</li>
+                    <li><i class="fas fa-check"></i> Canais Ao Vivo</li>
+                    <li><i class="fas fa-check"></i> Filmes e Séries</li>
+                    <li><i class="fas fa-check"></i> Qualidade 4K/HD</li>
+                    <li><i class="fas fa-check"></i> Conexões Ilimitadas</li>
+                    <li><i class="fas fa-check"></i> Suporte 24h Prioritário</li>
+                </ul>
+                <div class="plan-btn-container">
+                    <a href="https://wa.me/5587999423220?text=Olá,%20gostaria%20de%20assinar%20o%20plano%20Trimestral%20no%20valor%20de%20R%24%2079,00." class="btn btn-primary">Assinar Agora</a>
+                </div>
+            </div>
+            <div class="card plan-card">
+                <div class="plan-header">
+                    <h3>Plano Semestral</h3>
+                    <div class="plan-price">
+                        <span class="number">R$ 149,90</span>
+                        <span class="duration">6 meses</span>
+                    </div>
+                    <div class="plan-savings">Economize R$ 24,10</div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> 6 Meses de Acesso</li>
+                    <li><i class="fas fa-check"></i> Canais Ao Vivo</li>
+                    <li><i class="fas fa-check"></i> Filmes e Séries</li>
+                    <li><i class="fas fa-check"></i> Qualidade 4K/HD</li>
+                    <li><i class="fas fa-check"></i> Conexões Ilimitadas</li>
+                    <li><i class="fas fa-check"></i> Suporte 24h Prioritário</li>
+                </ul>
+                <div class="plan-btn-container">
+                    <a href="https://wa.me/5587999423220?text=Olá,%20gostaria%20de%20assinar%20o%20plano%20Semestral%20no%20valor%20de%20R%24%20149,90." class="btn btn-primary">Assinar Agora</a>
+                </div>
+            </div>
+            <div class="card plan-card">
+                <div class="plan-header">
+                    <h3>Plano Anual</h3>
+                    <div class="plan-price">
+                        <span class="number">R$ 280,00</span>
+                        <span class="duration">12 meses</span>
+                    </div>
+                    <div class="plan-savings">Economize R$ 68,00</div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> 12 Meses de Acesso</li>
+                    <li><i class="fas fa-check"></i> Canais Ao Vivo</li>
+                    <li><i class="fas fa-check"></i> Filmes e Séries</li>
+                    <li><i class="fas fa-check"></i> Qualidade 4K/HD</li>
+                    <li><i class="fas fa-check"></i> Conexões Ilimitadas</li>
+                    <li><i class="fas fa-check"></i> Suporte 24h Prioritário</li>
+                </ul>
+                <div class="plan-btn-container">
+                    <a href="https://wa.me/5587999423220?text=Olá,%20gostaria%20de%20assinar%20o%20plano%20Anual%20no%20valor%20de%20R%24%20280,00." class="btn btn-primary">Assinar Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#home" class="logo">
+                    <img src="logo.png" alt="Logo InfinityTV">
+                </a>
+                <p>O melhor streaming com qualidade premium, variedade e segurança.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#plans">Planos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Suporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Tutoriais</a></li>
+                    <li><a href="#">Aplicativos</a></li>
+                    <li><a href="#">Status do Serviço</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter">
+                <h3>Receba Novidades</h3>
+                <p>Inscreva-se e fique por dentro das últimas novidades.</p>
+                <form>
+                    <input type="email" placeholder="Seu e-mail">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+});
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+    });
+});
+
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Back to Top Button
+const backToTopButton = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 500) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// --- Código do Carrossel Automático ---
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.carousel-item');
+const indicators = document.querySelectorAll('.carousel-indicator');
+const totalSlides = slides.length;
+let slideInterval;
+
+function showSlide(index) {
+    if (index >= totalSlides) currentSlideIndex = 0;
+    else if (index < 0) currentSlideIndex = totalSlides - 1;
+    else currentSlideIndex = index;
+
+    const offset = -currentSlideIndex * 100;
+    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === currentSlideIndex);
+    });
+}
+
+function currentSlide(n) {
+    resetInterval();
+    showSlide(n - 1);
+}
+
+function resetInterval() {
+    clearInterval(slideInterval);
+    startInterval();
+}
+
+function startInterval() {
+    slideInterval = setInterval(() => {
+        showSlide(currentSlideIndex + 1);
+    }, 5000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlideIndex);
+    startInterval();
+});
+
+document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+});
+document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+    startInterval();
+});
+// --- Fim do Código do Carrossel ---
+
+document.addEventListener('DOMContentLoaded', function() {
+    'use strict';
+    var testim = document.getElementById("testim"),
+        testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+        testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+        testimLeftArrow = document.getElementById("left-arrow"),
+        testimRightArrow = document.getElementById("right-arrow"),
+        testimSpeed = 4500,
+        currentSlide = 0,
+        currentActive = 0,
+        testimTimer,
+        touchStartPos,
+        touchEndPos,
+        touchPosDiff,
+        ignoreTouch = 30;
+
+    function playSlide(slide) {
+        for (var k = 0; k < testimDots.length; k++) {
+            testimContent[k].classList.remove("active");
+            testimContent[k].classList.remove("inactive");
+            testimDots[k].classList.remove("active");
+        }
+        if (slide < 0) {
+            slide = currentSlide = testimContent.length - 1;
+        }
+        if (slide > testimContent.length - 1) {
+            slide = currentSlide = 0;
+        }
+        if (currentActive != currentSlide) {
+            testimContent[currentActive].classList.add("inactive");
+        }
+        testimContent[slide].classList.add("active");
+        testimDots[slide].classList.add("active");
+        currentActive = currentSlide;
+        clearTimeout(testimTimer);
+        testimTimer = setTimeout(function() {
+            playSlide(currentSlide += 1);
+        }, testimSpeed);
+    }
+
+    testimLeftArrow.addEventListener("click", function() {
+        playSlide(currentSlide -= 1);
+    });
+    testimRightArrow.addEventListener("click", function() {
+        playSlide(currentSlide += 1);
+    });
+
+    for (var l = 0; l < testimDots.length; l++) {
+        testimDots[l].addEventListener("click", function() {
+            playSlide(currentSlide = testimDots.indexOf(this));
+        });
+    }
+
+    playSlide(currentSlide);
+
+    document.addEventListener("keyup", function(e) {
+        switch (e.keyCode) {
+            case 37:
+                testimLeftArrow.click();
+                break;
+            case 39:
+                testimRightArrow.click();
+                break;
+            default:
+                break;
+        }
+    });
+
+    testim.addEventListener("touchstart", function(e) {
+        touchStartPos = e.changedTouches[0].clientX;
+    });
+    testim.addEventListener("touchend", function(e) {
+        touchEndPos = e.changedTouches[0].clientX;
+        touchPosDiff = touchStartPos - touchEndPos;
+        if (Math.abs(touchPosDiff) > ignoreTouch) {
+            if (touchPosDiff > 0) {
+                testimLeftArrow.click();
+            } else {
+                testimRightArrow.click();
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>
